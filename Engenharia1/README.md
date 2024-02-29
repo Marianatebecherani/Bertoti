@@ -2,3 +2,7 @@ We see three critical differences between programming and software engineering: 
 
 
 Within Google, we sometimes say, “Software engineering is programming integrated over time.” Programming is certainly a significant part of software engineering: after all, programming is how you generate new software in the first place. If you accept this distinction, it also becomes clear that we might need to delineate between programming tasks (development) and software engineering tasks (development, modification, maintenance). The addition of time adds an important new dimension to programming. Cubes aren’t squares, distance isn’t velocity. Software engineering isn’t programming.
+
+<h1>Comentário</h1>
+<p>A programação e a engenharia de software são duas áreas intimamente relacionadas, mas distintas, dentro do campo da tecnologia da informação.
+Enquanto a programação se concentra na codificação e implementação de soluções de software específicas, a engenharia de software abrange uma gama mais ampla de atividades relacionadas ao desenvolvimento de software, desde o planejamento e a concepção até a entrega e manutenção de sistemas de software complexos e escaláveis.</p>
