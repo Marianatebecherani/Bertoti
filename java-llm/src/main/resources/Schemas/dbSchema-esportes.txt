@@ -1,0 +1,38 @@
+CREATE DATABASE IF NOT EXISTS esportes;
+
+USE esportes;
+
+CREATE TABLE IF NOT EXISTS atleta (
+    id_atleta INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    idade INT
+);
+
+CREATE TABLE IF NOT EXISTS competicao (
+    id_competicao INT AUTO_INCREMENT PRIMARY KEY,
+    nome_competicao VARCHAR(100),
+    localizacao VARCHAR(100),
+    data_inicio DATE
+);
+
+CREATE TABLE IF NOT EXISTS equipe (
+    id_equipe INT PRIMARY KEY,
+    nome_equipe VARCHAR(100)
+);
+
+CREATE TABLE IF NOT EXISTS participa (
+    id_equipe INT,
+    id_competicao INT,
+    resultado VARCHAR(100),
+    PRIMARY KEY (id_equipe, id_competicao),
+    FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
+    FOREIGN KEY (id_competicao) REFERENCES competicao(id_competicao)
+);
+
+CREATE TABLE IF NOT EXISTS pertence (
+    id_equipe INT,
+    id_atleta INT,
+    PRIMARY KEY (id_equipe, id_atleta),
+    FOREIGN KEY (id_equipe) REFERENCES equipe(id_equipe),
+    FOREIGN KEY (id_atleta) REFERENCES atleta(id_atleta)
+);
