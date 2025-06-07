@@ -2,18 +2,18 @@
 package pattern;
 
 public class DeviceContext {
-    private IDevice strategy;
+    private Device strategy;
 
     // Setter para injetar a estratégia
-    public void setStrategy(IDevice strategy) {
+    public void setStrategy(Device strategy) {
         this.strategy = strategy;
     }
 
     // Executa o algoritmo através da interface
-    public void showDevice(Device device) {
+    public void showDevice() {
         if (strategy == null) {
             throw new IllegalStateException("Estratégia não definida!");
         }
-        strategy.showSpecifications(device);
+        strategy.showSpecifications();
     }
 }

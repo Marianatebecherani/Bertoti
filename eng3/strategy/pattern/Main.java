@@ -5,25 +5,25 @@ public class Main {
     public static void main(String[] args) {
         DeviceContext context = new DeviceContext();
 
-        Device celular  = new Device("6.1\"",  "Snapdragon 888", 4500,  8);
-        Device notebook = new Device("15.6\"", "Intel i7",       6000, 16);
-        Device desktop  = new Device("27\"",   "AMD Ryzen 9",      0,  32);
-        Device tablet   = new Device("10.5\"", "Apple A14",       7600,  4);
+        Cellphone celular  = new Cellphone("6.1\"", "Snapdragon 888", 4500, 8, true);
+        Notebook notebook = new Notebook("15.6\"", "Intel i7", 6000, 16, false);
+        Desktop desktop  = new Desktop("27\"", "AMD Ryzen 9", 32, "mini-ITX");
+        Tablet tablet   = new Tablet("10.5\"", "Apple A14", 7600, 4, true);
 
         // Celular
-        context.setStrategy(new Cellphone());
-        context.showDevice(celular);
+        context.setStrategy(celular);
+        context.showDevice();
 
         // Notebook
-        context.setStrategy(new Notebook());
-        context.showDevice(notebook);
+        context.setStrategy(notebook);
+        context.showDevice();
 
         // Desktop
-        context.setStrategy(new Desktop());
-        context.showDevice(desktop);
+        context.setStrategy(desktop);
+        context.showDevice();
 
         // Tablet
-        context.setStrategy(new Tablet());
-        context.showDevice(tablet);
+        context.setStrategy(tablet);
+        context.showDevice();
     }
 }
